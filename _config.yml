@@ -1,0 +1,146 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 霪霖笙箫的博客
+subtitle: 国服大前端, 努力攒经验中… 动漫控，摄影迷，请多指教 ^_^
+description: 欢迎访问霪霖笙箫的博客
+author: Fridolph
+language: zh-CN
+timezone:
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://github.fridolph.io/
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: 标签
+archive_dir: 文章总览
+category_dir: 分类
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 20
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+# theme: hexo-theme-melody
+theme: butterfly
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: https://github.com/Fridolph/Fridolph.github.io.git
+  branch: master
+  user: 249121486@qq.com
+
+# 生成RSS文件的插件
+feed:
+  enable: true
+  type:
+    - atom
+    - rss2
+  path:
+    - atom.xml
+    - rss2.xml
+  limit: 20
+  hub:
+  content_limit: 140
+  order_by: -date  
+  autodiscovery: true
+
+# 添加侧边栏的时钟组件
+electric_clock:
+  priority: 5
+  enable: true
+  enable_page: /
+  layout:
+    type: class
+    name: sticky_layout
+    index: 0
+  temple_html: '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>'
+
+# hexo-magnet 插件
+magnet:
+  enable: true
+  priority: 1
+  enable_page: /
+  type: categories
+  devide: 2
+  display:
+    - name: 前端学习
+      display_name: 前端学习
+      icon: 📚
+    - name: 代码相关
+      display_name: 代码相关
+      icon: 👩‍💻
+    - name: 读书笔记
+      display_name: 读书笔记
+      icon: 📒
+    - name: 游戏评测
+      display_name: 游戏评测
+      icon: 🎮
+    - name: 生活趣闻
+      display_name: 生活趣闻
+      icon: 🐱‍👓
+    - name: 随笔随想
+      display_name: 随笔随想
+      icon: 💡
+  color_setting:
+    text_color: black
+    text_hover_color: white
+    background_color: "#f2f2f2"
+    background_hover_color: "#b30070"
+  layout:
+    type: id
+    name: recent-posts
+    index: 0
+  temple_html: '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet">${temple_html_item}</div></div>'
+  plus_style: ""
+
+# aplayer 播放器
+aplayer:
+  meting: true
