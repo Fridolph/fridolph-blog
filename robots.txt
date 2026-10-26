@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /fridolph-blog/_astro/
+
+Sitemap: https://fridolph.github.io/fridolph-blog/sitemap-index.xml
